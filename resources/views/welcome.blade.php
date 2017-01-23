@@ -89,7 +89,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
                 <div class="">
-                    <!-- <a href="https://blog.dmic.studio" target='_blank'>海诺博客</a> -->
+                    <a href="https://blog.dmic.studio" target='_blank'>海诺博客</a>
                 </div>
             </div>
         </div>
