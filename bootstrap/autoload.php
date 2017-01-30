@@ -2,6 +2,7 @@
 
 define('LARAVEL_START', microtime(true));
 
+require __DIR__.'/helpers.php';
 /*
 |--------------------------------------------------------------------------
 | Register The Composer Auto Loader
@@ -13,7 +14,6 @@ define('LARAVEL_START', microtime(true));
 | loading of any our classes "manually". Feels great to relax.
 |
 */
-
 require __DIR__.'/../vendor/autoload.php';
 
 /*
