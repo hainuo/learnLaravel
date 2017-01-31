@@ -1,17 +1,9 @@
-
 // Fonts
-@import url(https://fonts.lug.ustc.edu.cn/css?family=Raleway:300,400,600);
-
-// Variables
-@import "variables";
-
-// Bootstrap
+@import url(https://fonts.lug.ustc.edu.cn/css?family=Raleway:300,400,600); // Variables
+@import "variables"; // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
 $navbar-color: #3c3e42;
-
 /* universal */
-
 body {
   padding-top: 60px;
 }
@@ -27,10 +19,13 @@ textarea {
 .jumbotron {
   text-align: center;
 }
-
 /* typography */
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1;
 }
 
@@ -54,9 +49,7 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-
 /* header */
-
 .navbar-inverse {
   background-color: $navbar-color;
 }
@@ -70,6 +63,7 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+
   &:hover {
     color: #fff;
   }
@@ -77,13 +71,12 @@ p {
 
 #logout {
   cursor: default;
+
   &:hover {
     background-color: transparent;
   }
 }
-
 /* footer */
-
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -123,15 +116,16 @@ footer {
   }
 }
 /* sidebar */
-
 aside {
   section {
     padding: 10px 0;
     margin-top: 20px;
+
     &:first-child {
       border: 0;
       padding-top: 0;
     }
+
     span {
       display: block;
       margin-bottom: 3px;
@@ -144,10 +138,12 @@ section.user_info {
   padding-bottom: 10px;
   margin-top: 20px;
   text-align: center;
+
   .gravatar {
     float: none;
     max-width: 70px;
   }
+
   h1 {
     font-size: 1.4em;
     letter-spacing: -1px;
@@ -163,8 +159,10 @@ section.user_info {
   border-radius: 50%;
 }
 /* forms */
-
-input, textarea, select, .uneditable-input {
+.uneditable-input,
+input,
+select,
+textarea {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
@@ -176,4 +174,36 @@ input {
 
 .panel {
   margin-top: 50px;
+}
+/* Users edit */
+.gravatar_edit {
+  margin: 15px auto;
+  text-align: center;
+
+  .gravatar {
+    float: none;
+    max-width: 100px;
+  }
+}
+/* Users index */
+.users {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+
+  .gravatar {
+    float: none;
+  }
+
+  .delete-btn {
+    float: right;
+    position: relative;
+    right: 0;
+  }
 }
