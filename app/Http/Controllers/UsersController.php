@@ -28,11 +28,6 @@ class UsersController extends Controller
         return view('Users/create');
     }
 
-    public function show($id)
-    {
-        $user = User::findOrFail($id);
-        return view('users.show', compact('user'));
-    }
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -106,4 +101,13 @@ class UsersController extends Controller
         session()->flash('success', '成功删除用户！');
         return back();
     }
+    public function show($id)
+    {
+        $user = User::findOrFail($id);
+        $statuses = $user->statuses()
+                           ->orderBy('created_at', 'desc')
+                           ->paginate(30);
+        return view('users.show', compact('user', 'statuses'));
+    }
+
 }
